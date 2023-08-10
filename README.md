@@ -1,9 +1,16 @@
 # Filebrowser Docker Installation Guide
 
-## Assumptions:
+### Assumptions:
 You already have Docker and Portainer intalled on your system
 
-## Prep Work:
-You need to create the 'filebrowser.db' file before running the stack in Portainer
+### Installation:
+In your home directory create the App Data folder for your Docker config files
+`cd ~
+mkdir appdata
+cd appdata
+mkdir filebrowser`
 
-`mdir`
+Create the 'filebrowser.db' file before running the stack in Portainer
+`cd ~
+cd appdata/filebrowser
+touch filebrowser.db`
