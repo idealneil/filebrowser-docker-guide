@@ -1,7 +1,10 @@
 # Filebrowser Docker Installation Guide
 
 ### Assumptions:
-You already have Docker and Portainer intalled on your Linux system
+You already have Docker and Portainer intalled on your Linux server
+
+- Docker install [guide](https://docs.docker.com/engine/install/)
+- Portainer Community Edition install [guide](https://docs.portainer.io/start/install-ce/server/docker/linux)
 
 ### Installation:
 In your home directory create the App Data folder for your Docker config files
