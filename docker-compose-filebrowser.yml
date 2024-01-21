@@ -1,0 +1,13 @@
+version: "2.2"
+services:
+  filebrowser:
+    image: filebrowser/filebrowser
+    user: 1000:1000
+    ports:
+      - 8081:80
+    volumes:
+      - ~/:/srv #this will open filebroswer in your home directory
+      - ~/appdata/filebrowser/filebrowser.db:/database.db #create the filebrowser.db file before deploting
+    restart: unless-stopped
+    security_opt:
+      - no-new-privilegs:true
