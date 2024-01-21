@@ -1,4 +1,4 @@
-version: "2.2"
+version: '3'
 services:
   filebrowser:
     image: filebrowser/filebrowser
@@ -6,8 +6,8 @@ services:
     ports:
       - 8081:80
     volumes:
-      - ~/:/srv #this will open filebroswer in your home directory
-      - ~/appdata/filebrowser/filebrowser.db:/database.db #create the filebrowser.db file before deploting
+      - /home/user:/srv #change user to your name or use ~/
+      - /home/user/appdata/filebrowser/filebrowser.db:/database.db #create the filebrowser.db file before deploying
     restart: unless-stopped
     security_opt:
       - no-new-privilegs:true
