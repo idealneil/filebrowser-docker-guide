@@ -10,4 +10,4 @@ services:
       - /home/user/appdata/filebrowser/filebrowser.db:/database.db #create the filebrowser.db file before deploying
     restart: unless-stopped
     security_opt:
-      - no-new-privilegs:true
+      - no-new-privileges:true
