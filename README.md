@@ -8,14 +8,14 @@ You already have Docker intalled on your Linux server.
 
 ### Installation:
 In your home directory create the App Data folder for your Docker config files
-`cd
-mkdir appdata
-cd appdata
-mkdir filebrowser`
+`cd`
+`mkdir appdata`
+`cd appdata`
+`mkdir filebrowser`
 
-Create the 'filebrowser.db' file before running the stack in Portainer. Otherwise it will create a folder instead.
-`cd filebrowser
-touch filebrowser.db`
+Create the 'filebrowser.db' file before running your docker compose file, otherwise it will create a folder instead. This will not work.
+`cd filebrowser`
+`touch filebrowser.db`
 
 Create a new docker compose yml file or copy the contents of the docker-compose-filebrowser.yml file into your exising one.
 Change the volume details to match the home folder for your system. Filebrowser uses port 8080, which is a very common port for other docker containers. Change the left hand side of the ports to suit. In my case I'm using port 8081
