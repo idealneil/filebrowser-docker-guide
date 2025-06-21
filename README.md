@@ -23,12 +23,12 @@ Update your docker compose file in detatched mode.
 `docker compose up -d`
 
 Check the logs to see if the container deployed successfully.
-`docker logs filebrowser'
+`docker logs filebrowser`
 
 Note down the admin password in the logs.
-`<date> <time> Generated random admin password for quick setup: xOGWRHB0t8fq'
+`e.g. - Generated random admin password for quick setup: xOGWRHB0t8fq'
 
 Open a browser to the ip address of your server with port nunber you set e.g. 192.168.1.100:8081
-Login with username: admin, password: <genrated from logs e.g. xOGWRHB0t8fq
-Once you've successfully you change the admin user's name and password to one that you want.
+Login with username: admin, password: generated from logs e.g. xOGWRHB0t8fq
+Once you've successfully logged in change the admin user's name and password to one that you want.
 Happy File Browsing on your Linux Server :)
