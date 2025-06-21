@@ -1,24 +1,34 @@
-# Filebrowser Docker Installation Guide
+# Filebrowser Docker Compose Installation Guide
 
 ### Assumptions:
-You already have Docker and Portainer intalled on your Linux server
+You already have Docker intalled on your Linux server.
 
-- Docker install [guide](https://docs.docker.com/engine/install/)
-- Portainer Community Edition install [guide](https://docs.portainer.io/start/install-ce/server/docker/linux)
+- Docker install [guide](https://docs.docker.com/engine/install/).
+- Follow the post install [guide](https://docs.docker.com/engine/install/linux-postinstall/) and add your user to the docker group.
 
 ### Installation:
 In your home directory create the App Data folder for your Docker config files
-`cd ~
+`cd
 mkdir appdata
 cd appdata
 mkdir filebrowser`
 
-Create the 'filebrowser.db' file before running the stack in Portainer. Otherwise it will create a folder instead
+Create the 'filebrowser.db' file before running the stack in Portainer. Otherwise it will create a folder instead.
 `cd filebrowser
 touch filebrowser.db`
 
-In Portainer create a new Stack. Give the Stack a name and copy the contents of the docker-compose-filebrowser.yml file into the Web Editor. Change the volume details to match home folder for your system. Deploy the stack.
+Create a new docker compose yml file or copy the contents of the docker-compose-filebrowser.yml file into your exising one.
+Change the volume details to match the home folder for your system. Filebrowser uses port 8080, which is a very common port for other docker containers. Change the left hand side of the ports to suit. In my case I'm using port 8081
+Update your docker compose file in detatched mode.
+`docker compose up -d`
 
-Open a browser to the ip address of your server with port 8081 e.g. 192.168.1.100:8081
-Login with username: admin, password: admin
-For security change these default login details
+Check the logs to see if the container deployed successfully.
+`docker logs filebrowser'
+
+Note down the admin password in the logs.
+`<date> <time> Generated random admin password for quick setup: xOGWRHB0t8fq'
+
+Open a browser to the ip address of your server with port nunber you set e.g. 192.168.1.100:8081
+Login with username: admin, password: <genrated from logs e.g. xOGWRHB0t8fq
+Once you've successfully you change the admin user's name and password to one that you want.
+Happy File Browsing on your Linux Server :)
