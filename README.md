@@ -13,14 +13,8 @@ mkdir appdata
 cd appdata
 mkdir filebrowser
 ```
-Create the 'filebrowser.db' file before running your docker compose file, otherwise it will create a folder instead. This will not work.
-```
-cd filebrowser
-touch filebrowser.db
-```
-
-Create a new docker compose yml file or copy the contents of the docker-compose-filebrowser.yml file into your exising one.
-Change the volume details to match the home folder for your system. Filebrowser uses port 8080, which is a very common port for other docker containers. Change the left hand side of the ports to suit. In my case I'm using port 8081
+Create a new docker compose yml file or update your existing one with the contents of the attached 'docker-compose-filebrowser.yml' file.
+Change the volume details to match the home folder name for your system. Run "id $user" to checkFilebrowser uses port 8080, which is a very common port for other docker containers. Change the left hand side of the ports to suit. In my case I'm using port 8081
 Update your docker compose file in detatched mode.
 ```
 docker compose up -d
