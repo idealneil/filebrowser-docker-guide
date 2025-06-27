@@ -3,12 +3,13 @@ services:
   filebrowser:
     image: filebrowser/filebrowser
     container_name: filebrowser
-    user: 1000:1000
-    ports:
-      - 8081:80 #default port is 8080, change as needed. Don't change port 80
+    environment:
+      - PUID=1000
+      - PGID=1000
     volumes:
-      - /home/user:/srv #change 'user' for both volume entries to your name
-      - /home/user/appdata/filebrowser/filebrowser.db:/database.db #create the filebrowser.db file before deploying
-    security_opt:
-      - no-new-privileges:true
+      - /home/user:/srv #change 'user' for the name of your account
+      - /home/user/appdata/filebrowser:/database #this will create the database.db file
+      - /home/user/appdata/filebrowser:/config #this will create the config file
+    ports:
+      - 8081:80 #default port is 8080, change as needed. Don't change the right hand side port (port 80)
     restart: unless-stopped
