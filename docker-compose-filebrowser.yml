@@ -8,8 +8,8 @@ services:
       - PGID=1000
     volumes:
       - /home/user:/srv #change 'user' for the name of your account
-      - /home/user/appdata/filebrowser:/database #this will create the database.db file
-      - /home/user/appdata/filebrowser:/config #this will create the config file
+      - /home/user/appdata/filebrowser:/database #this will create the filebrowser.db file
+      - /home/user/appdata/filebrowser:/config #this will create the settings.json file
     ports:
       - 8081:80 #default port is 8080, change as needed. Don't change the right hand side port (port 80)
     restart: unless-stopped
