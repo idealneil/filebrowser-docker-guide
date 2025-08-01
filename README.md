@@ -14,7 +14,7 @@ cd appdata
 mkdir filebrowser
 ```
 Create a new docker compose yml file or update your existing one with the contents of the attached 'docker-compose-filebrowser.yml' file.
-Change the volume details to match the home folder name for your system. Run "id $user" to check youruser id. Filebrowser uses port 8080, which is a very common port for other docker containers. Change the left hand side of the ports to suit. In my case I'm using port 8081
+Change the volume details to match the home folder name for your system. Run "id $user" to check your user id. Filebrowser uses port 8080, which is a very common port for other docker containers. Change the left hand side of the ports to suit. In my case I'm using port 8081
 Update your docker compose file in detatched mode.
 ```
 docker compose up -d
