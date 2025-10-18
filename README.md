@@ -33,4 +33,6 @@ Open a browser to the ip address of your server with port the number you set e.g
 Login with username: admin & password: generated from the logs e.g. `xOGWRHB0t8fq`.
 Once you've successfully logged in change the admin user's name and password to one that you want.
 
-Happy File Browsing on your Linux Server :)
+Filebrowser has a really nice dark theme. If that's 'your thing', select "Settings -> Global Settings tab at the top" Under 'Theme' click on the drop down and change it to 'Dark'. Update your changes at the bottom of that page.
+
+Happy File Browsing :)
