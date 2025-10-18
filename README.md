@@ -7,7 +7,7 @@ You already have Docker intalled on your Linux server.
 - Follow the post install [guide](https://docs.docker.com/engine/install/linux-postinstall/) and add your user to the docker group.
 
 ### Installation:
-In your home directory create the App Data folder for your Docker config files
+In your home directory create an App Data folder for all of your Docker config files. "appdata", "docker" are common folder names you can use.
 ```
 mkdir appdata
 cd appdata
